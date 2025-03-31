@@ -1,17 +1,22 @@
 ## Hi there 👋
 
-I'm a full stack engineer currently building an IOS app with swift, python, and my [custom vibe coding setup](https://github.com/build000r/llm_context_vibe_rations)
+I'm a full stack engineer currently working on 
+- an IOS app (swift/python)
+- [llm context management](https://github.com/build000r/llm_context_vibe_rations)
 
 ### web3 exp (3yrs)
-- backend eng @ jpg.space
-- solana token analytics
+- backend eng @ jpg.space (typescript, arweave, alchemy, graphql, psql, solidity)
+- solana token analytics (python, typescript, nodejs, psql, rust, reactjs, helius)
 
 ### saas exp (6yrs)
-- payroll
-- marketing
-- venture capital
-- healthcare
-- asset security
+- payroll (fullstack: typescript, nodejs, reactjs, nextjs)
+- marketing (founder / product manager
+- venture capital (product manager)
+- healthcare (product manager)
+- asset security (product manager)
+
+### 📫 How to reach me
+- buildooor@gmail.com
 
 <!--
 **build000r/build000r** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
