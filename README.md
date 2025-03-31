@@ -1,9 +1,8 @@
 ## Hi there 👋
 
 I'm a full stack engineer currently working on 
-- an IOS app (swift/python)
+- a consumer IOS app with AI features (swift/python)
 - [llm context management](https://github.com/build000r/llm_context_vibe_rations)
-- a lil [leetcoding](https://leetcode.com/u/buildooor/)
 
 ### web3 exp (3yrs)
 - backend eng @ jpg.space (typescript, arweave, alchemy, graphql, psql, solidity)
