@@ -6,11 +6,11 @@ I'm a full stack engineer currently working on
 
 ### web3 exp (3yrs)
 - backend eng @ jpg.space (typescript, arweave, alchemy, graphql, psql, solidity)
-- solana token analytics (python, typescript, nodejs, psql, rust, reactjs, helius)
+- fullstack/founder @ solana token analytics platform (python, typescript, nodejs, psql, rust, reactjs, helius)
 
 ### saas exp (6yrs)
 - payroll (fullstack: typescript, nodejs, reactjs, nextjs)
-- marketing (founder / product manager
+- marketing (founder / product manager)
 - venture capital (product manager)
 - healthcare (product manager)
 - asset security (product manager)
