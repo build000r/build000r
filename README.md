@@ -2,7 +2,7 @@
 
 I'm a full stack engineer currently working on 
 - a consumer IOS app with AI features (swift/python)
-- [llm context management](https://github.com/build000r/llm_context_vibe_rations)
+- [protocol model context](https://github.com/build000r/protocol-model-context) for better vibe coding
 
 ### web3 exp (3yrs)
 - backend eng @ jpg.space (typescript, arweave, alchemy, graphql, psql, solidity)
