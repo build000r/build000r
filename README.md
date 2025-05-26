@@ -1,20 +1,16 @@
 ## Hi there 👋
 
 I'm a full stack engineer currently working on 
-- a consumer IOS app with AI features (swift/python)
+- an AI integrated IOS app (swift/python)
 - [protocol model context](https://github.com/build000r/protocol-model-context) for better vibe coding
 
 ### web3 exp (3yrs)
-- backend eng @ jpg.space (typescript, arweave, alchemy, graphql, psql, solidity)
+- backend eng @ NFT curation protocol
 - fullstack @ solana token analytics platform [demo video](https://drive.google.com/file/d/1svwqFIUory55qCi300bO3CM-EVtkiifz/view?usp=sharing)
   
 ### saas exp (6yrs)
-- payroll (fullstack: typescript, nodejs, reactjs, nextjs)
-- marketing automation (founder / product manager)
-- website builder (full stack) [demo video](https://drive.google.com/file/d/1W0meYJFO0YtcGy7fQrJzbrO35rnB7A8k/view?usp=sharing)
-- venture capital (product manager)
-- healthcare (product manager)
-- asset security (product manager)
+- fullstack @ payroll automation | website builder app [demo video](https://drive.google.com/file/d/1W0meYJFO0YtcGy7fQrJzbrO35rnB7A8k/view?usp=sharing)
+- product manager @ venture capital firm | marketing automation app | healthcare app | asset security platform
 
 ### 📫 How to reach me
 - buildooor@gmail.com
