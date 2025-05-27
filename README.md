@@ -1,8 +1,7 @@
 ## Hi there 👋
 
 I'm a full stack engineer currently working on 
-- an AI integrated IOS app (swift/python)
-- [protocol model context](https://github.com/build000r/protocol-model-context) for better vibe coding
+- an AI integrated IOS app (swift/python) with my [ai coding agent](https://github.com/build000r/pcm)
 
 ### web3 exp (3yrs)
 - backend eng @ NFT curation protocol
