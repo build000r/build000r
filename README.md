@@ -1,30 +1,23 @@
-## Hi there 👋
+## build000r
 
-I'm a full stack engineer currently working on 
-- an AI integrated IOS app (swift/python) with my [ai coding agent](https://github.com/build000r/pcm)
+i build production systems across health, finance, and auth.
+some of my users are people. some are ai agents.
+i own every loc...i just don't type them all.
 
-### web3 exp (3yrs)
-- backend eng @ NFT curation protocol
-- fullstack @ solana token analytics platform [demo video](https://drive.google.com/file/d/1svwqFIUory55qCi300bO3CM-EVtkiifz/view?usp=sharing)
-  
-### saas exp (6yrs)
-- fullstack @ payroll automation | website builder app [demo video](https://drive.google.com/file/d/1W0meYJFO0YtcGy7fQrJzbrO35rnB7A8k/view?usp=sharing)
-- product manager @ venture capital firm | marketing automation app | healthcare app | asset security platform
+---
 
-### 📫 How to reach me
-- buildooor@gmail.com
+**health**
+clinical lab analysis and personalized health optimization protocols.
+fastapi, pgvector, celery, react, d3.
 
-<!--
-**build000r/build000r** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**finance**
+the backend brain for an accounting firm.
+month-end automation, fuzzy deposit matching, vendor analytics, depreciation scheduling.
 
-Here are some ideas to get you started:
+**auth & payments** 
+rolled my own auth to avoid having to roll my own auth. 
+multi-wallet (sol/eth/btc) + traditional auth. stripe. multi-tenant RLS.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+buildooor.com
