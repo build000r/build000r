@@ -9,7 +9,7 @@ i own every loc -- i just don't type them all.
 
 ### currently building
 
-**sweet potato (spaps)** -- centralized auth + payments for multi-wallet and traditional flows. stripe billing, tiered entitlements, pii encryption. ships sdks and a cli so other projects don't reinvent auth. [packages on github](https://github.com/build000r/sweet-potato).
+**sweet potato (spaps)** -- centralized auth + payments for multi-wallet and traditional flows. stripe billing, tiered entitlements, pii encryption. ships sdks and a cli so other projects don't reinvent auth. [npm](https://www.npmjs.com/package/spaps-sdk) / [pypi](https://pypi.org/project/spaps/).
 
 **[skillbox](https://github.com/build000r/skillbox)** -- private single-tenant dev box for you and your coding agents. docker-based, tailscale-first, with durable agent homes and client-scoped overlays.
 
