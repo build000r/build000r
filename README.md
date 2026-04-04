@@ -2,8 +2,10 @@
 
 ### interests
 
-**health** -- clinical lab analysis and personalized health optimization
+**health** -- clinical lab analysis and personalized health optimization 
+
 **accounting & finance** -- ai powered accounting infrastructure 
+
 **ai tutoring** -- helping "vibe coders" leverage, maintain, and understand agentic engineering environments
 
 [buildooor.com](https://buildooor.com)
