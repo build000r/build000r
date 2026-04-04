@@ -6,7 +6,7 @@
 
 **accounting & finance** -- ai powered accounting infrastructure 
 
-**ai tutoring** -- helping "vibe coders" leverage, maintain, and understand agentic engineering environments
+**ai tutoring** -- leverage, maintain, and understand agentic engineering environments
 
 ---
 
