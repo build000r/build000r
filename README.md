@@ -9,7 +9,14 @@ i own every loc -- i just don't type them all.
 
 ### currently building
 
-**sweet potato (spaps)** -- centralized auth + payments for multi-wallet and traditional flows. stripe billing, tiered entitlements, pii encryption. ships sdks and a cli so other projects don't reinvent auth. [npm](https://www.npmjs.com/package/spaps-sdk) / [pypi](https://pypi.org/project/spaps/).
+**sweet potato (spaps)** -- centralized auth + payments for multi-wallet and traditional flows. stripe billing, tiered entitlements, pii encryption. ships sdks and a cli so other projects don't reinvent auth.
+
+- [`spaps-sdk`](https://www.npmjs.com/package/spaps-sdk) -- typescript client with permission checking, rbac, and dayrate scheduling
+- [`spaps`](https://www.npmjs.com/package/spaps) -- cli and docker compose orchestrator for local spaps server
+- [`spaps-types`](https://www.npmjs.com/package/spaps-types) -- shared typescript types for the spaps ecosystem
+- [`spaps-issue-reporting-react`](https://www.npmjs.com/package/spaps-issue-reporting-react) -- drop-in react issue reporting ui
+- [`spaps`](https://pypi.org/project/spaps/) -- python client (pypi)
+- [`spaps-server-quickstart`](https://pypi.org/project/spaps-server-quickstart/) -- fastapi/celery scaffolding for spaps service backends (pypi)
 
 **[skillbox](https://github.com/build000r/skillbox)** -- private single-tenant dev box for you and your coding agents. docker-based, tailscale-first, with durable agent homes and client-scoped overlays.
 
