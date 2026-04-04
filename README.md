@@ -20,10 +20,6 @@ i own every loc -- i just don't type them all.
 
 **[skillbox](https://github.com/build000r/skillbox)** -- private single-tenant dev box for you and your coding agents. docker-based, tailscale-first, with durable agent homes and client-scoped overlays.
 
-**[swimmers](https://github.com/build000r/swimmers)** -- terminal aquarium for tmux sessions. each session is an animated ascii fish. active ones swim, busy ones bubble, sleeping ones sink. rust tui + axum api.
-
-**[clawgs](https://github.com/build000r/clawgs)** -- terminal-native ai log analysis. stream, tag, and query shell output with llms.
-
 **cfo** -- ai-powered accounting infrastructure. mcp server for quickbooks online, client portal and advisory site, and a mobile financial assistant. built for cpas managing multiple company files.
 
 **unclawg** -- governed control plane for ai agent work. agents propose, humans approve.
@@ -41,6 +37,10 @@ i own every loc -- i just don't type them all.
 ---
 
 ### open source
+
+**[swimmers](https://github.com/build000r/swimmers)** -- terminal aquarium for tmux sessions. each session is an animated ascii fish. active ones swim, busy ones bubble, sleeping ones sink. rust tui + axum api.
+
+**[clawgs](https://github.com/build000r/clawgs)** -- terminal-native ai log analysis. stream, tag, and query shell output with llms.
 
 **[skills](https://github.com/build000r/skills)** -- a very particular set of skills for claude code.
 
