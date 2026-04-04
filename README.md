@@ -1,15 +1,18 @@
 # build000r
 
-i build production systems for people and ai agents.
-i own every loc -- i just don't type them all.
+### interests
+
+**health** -- clinical lab analysis and personalized health optimization
+**accounting & finance** -- ai powered accounting infrastructure 
+**ai tutoring** -- helping "vibe coders" leverage, maintain, and understand agentic engineering environments
 
 [buildooor.com](https://buildooor.com)
 
 ---
 
-### currently building
+### active
 
-**sweet potato (spaps)** -- centralized auth + payments for multi-wallet and traditional flows. stripe billing, tiered entitlements, pii encryption. ships sdks and a cli so other projects don't reinvent auth.
+**sweet potato** -- centralized auth + payments for multi-wallet and traditional flows. stripe billing, tiered entitlements, pii encryption. ships sdks and a cli so other projects don't reinvent auth.
 
 - [`spaps-sdk`](https://www.npmjs.com/package/spaps-sdk) -- typescript client with permission checking, rbac, and dayrate scheduling
 - [`spaps`](https://www.npmjs.com/package/spaps) -- cli and docker compose orchestrator for local spaps server
@@ -20,19 +23,11 @@ i own every loc -- i just don't type them all.
 
 **[skillbox](https://github.com/build000r/skillbox)** -- private single-tenant dev box for you and your coding agents. docker-based, tailscale-first, with durable agent homes and client-scoped overlays.
 
-**cfo** -- ai-powered accounting infrastructure. mcp server for quickbooks online, client portal and advisory site, and a mobile financial assistant. built for cpas managing multiple company files.
+**cfo** -- ai-powered accounting infrastructure. quickbooks online compatable mcp server, client portal and advisory site, and a mobile financial assistant. built for cpas managing multiple company files.
 
 **unclawg** -- governed control plane for ai agent work. agents propose, humans approve.
 
 **[htma labs](https://htmalabs.com)** -- mineral analysis visualizations and recovery protocols for hair tissue mineral analysis practitioners.
-
----
-
-### closed-source domains
-
-**health** -- clinical lab analysis and personalized optimization protocols.
-
-**finance** -- month-end automation, fuzzy deposit matching, vendor analytics, depreciation scheduling for accounting firms.
 
 ---
 
