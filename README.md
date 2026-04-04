@@ -29,7 +29,7 @@
 
 **unclawg** -- governed control plane for ai agent work. agents propose, humans approve.
 
-**[htma labs](https://htmalabs.com)** -- mineral analysis visualizations and recovery protocols for hair tissue mineral analysis practitioners.
+**[htma labs](https://htmalabs.com)** -- mineral analysis visualizations and recovery protocols for data driven holistic health practitioners and their clients.
 
 ---
 
