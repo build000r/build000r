@@ -24,7 +24,7 @@ i own every loc -- i just don't type them all.
 
 **[clawgs](https://github.com/build000r/clawgs)** -- terminal-native ai log analysis. stream, tag, and query shell output with llms.
 
-**cfo** -- mcp server that turns any ai assistant into a senior bookkeeper. plugs straight into quickbooks online.
+**cfo** -- ai-powered accounting infrastructure. mcp server for quickbooks online, client portal and advisory site, and a mobile financial assistant. built for cpas managing multiple company files.
 
 **unclawg** -- governed control plane for ai agent work. agents propose, humans approve.
 
