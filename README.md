@@ -1,6 +1,6 @@
-# build000r
+[buildooor.com](https://buildooor.com)
 
-### interests
+### Day job(s) 
 
 **health** -- clinical lab analysis and personalized health optimization 
 
@@ -8,11 +8,10 @@
 
 **ai tutoring** -- helping "vibe coders" leverage, maintain, and understand agentic engineering environments
 
-[buildooor.com](https://buildooor.com)
-
 ---
 
 ### active
+**[htma labs](https://htmalabs.com)** -- mineral analysis visualizations and recovery protocols for data driven holistic health practitioners and their clients.
 
 **sweet potato** -- centralized auth + payments for multi-wallet and traditional flows. stripe billing, tiered entitlements, pii encryption. ships sdks and a cli so other projects don't reinvent auth.
 
@@ -28,8 +27,6 @@
 **cfo** -- ai-powered accounting infrastructure. quickbooks online compatable mcp server, client portal and advisory site, and a mobile financial assistant. built for cpas managing multiple company files.
 
 **unclawg** -- governed control plane for ai agent work. agents propose, humans approve.
-
-**[htma labs](https://htmalabs.com)** -- mineral analysis visualizations and recovery protocols for data driven holistic health practitioners and their clients.
 
 ---
 
