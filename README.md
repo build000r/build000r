@@ -6,7 +6,7 @@
 
 **accounting & finance** -- ai powered accounting infrastructure 
 
-**ai tutoring** -- leverage, maintain, and understand agentic engineering environments
+**ai for domain experts** -- forward-deployed engineering and custom agent workflows for senior practitioners and founder-execs
 
 ---
 
