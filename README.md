@@ -1,10 +1,8 @@
-[buildooor.com](https://buildooor.com)
+building production ai systems for domain experts · [buildooor.com](https://buildooor.com)
 
-### Day job(s) 
+**finance** -- ai-powered accounting infrastructure
 
-**health** -- clinical lab analysis and personalized health optimization 
-
-**accounting & finance** -- ai powered accounting infrastructure 
+**health** -- clinical lab analysis and personalized health optimization
 
 **ai for domain experts** -- forward-deployed engineering and custom agent workflows for senior practitioners and founder-execs
 
@@ -17,14 +15,11 @@
 
 - [`spaps-sdk`](https://www.npmjs.com/package/spaps-sdk) -- typescript client with permission checking, rbac, and dayrate scheduling
 - [`spaps`](https://www.npmjs.com/package/spaps) -- cli and docker compose orchestrator for local spaps server
-- [`spaps-types`](https://www.npmjs.com/package/spaps-types) -- shared typescript types for the spaps ecosystem
-- [`spaps-issue-reporting-react`](https://www.npmjs.com/package/spaps-issue-reporting-react) -- drop-in react issue reporting ui
 - [`spaps`](https://pypi.org/project/spaps/) -- python client (pypi)
-- [`spaps-server-quickstart`](https://pypi.org/project/spaps-server-quickstart/) -- fastapi/celery scaffolding for spaps service backends (pypi)
 
 **[skillbox](https://github.com/build000r/skillbox)** -- private single-tenant dev box for you and your coding agents. docker-based, tailscale-first, with durable agent homes and client-scoped overlays.
 
-**cfo** -- ai-powered accounting infrastructure. quickbooks online compatable mcp server, client portal and advisory site, and a mobile financial assistant. built for cpas managing multiple company files.
+**cfo** -- ai-powered accounting infrastructure. quickbooks online compatible mcp server, client portal and advisory site, and a mobile financial assistant. built for cpas managing multiple company files.
 
 **unclawg** -- governed control plane for ai agent work. agents propose, humans approve.
 
@@ -42,4 +37,4 @@
 
 ---
 
-[buildooor.com](https://buildooor.com)
+open to ai build diagnosis and implementation engagements · [buildooor.com](https://buildooor.com)
