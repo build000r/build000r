@@ -11,6 +11,10 @@ building production ai systems for domain experts · [buildooor.com](https://bui
 ### active
 **[htma labs](https://htmalabs.com)** -- mineral analysis visualizations and recovery protocols for data driven holistic health practitioners and their clients.
 
+**[dream](https://github.com/build000r/dream)** -- iphone-first lucid dream coach. local-first wake capture, nightmare patterns, and nightly ritual flow with cloud agents as session-time helpers.
+
+**[cycle chef](https://github.com/build000r/recipe-ios)** -- practitioner-supervised, cycle-synced meal planning. ios app, backend api, public site, and component catalog for phase-aware nutrition workflows.
+
 **sweet potato** -- centralized auth + payments for multi-wallet and traditional flows. stripe billing, tiered entitlements, pii encryption. ships sdks and a cli so other projects don't reinvent auth.
 
 - [`spaps-sdk`](https://www.npmjs.com/package/spaps-sdk) -- typescript client with permission checking, rbac, and dayrate scheduling
