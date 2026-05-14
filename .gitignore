@@ -1,3 +1,10 @@
 DU*.md
 WI*.md
 .n*/
+
+# Local agent/tool state
+.beads/
+.claude/
+.codex/
+.mcp.json
+mcp.json
