@@ -1,0 +1,99 @@
+<!-- mmdx
+{
+  "entry": "main",
+  "shortLink": { "username": "buildooor", "slug": "build000r-project-status" },
+  "links": [
+    { "from": "main", "label": "Open proof status", "to": "proof-status", "title": "Open build000r proof status" },
+    { "from": "main", "label": "Open primary flows", "to": "primary-flows", "title": "Open build000r primary flows" },
+    { "from": "main", "label": "Open next move", "to": "next-move", "title": "Open build000r next move" }
+  ]
+}
+-->
+
+## chart main Build000r Project Status Crux
+```mermaid
+flowchart LR
+  vision["build000r README: public portfolio index"]:::gray
+  read["GREEN README reviewed"]:::green
+  checks["RED no executable package or validation command found"]:::red
+  linkcheck["YELLOW portfolio link checker: build000r-portfolio-reality-idea-plan-ld7.7"]:::yellow
+  contract["YELLOW README or site sync contract: build000r-portfolio-reality-idea-plan-ld7.8"]:::yellow
+  manifest["YELLOW structured manifest refactor: build000r-portfolio-reality-idea-plan-ld7.10"]:::yellow
+  vision --> read --> checks --> linkcheck --> contract --> manifest
+  classDef green fill:#dff7df,stroke:#20833a,stroke-width:2px,color:#0f2f18
+  classDef yellow fill:#fff3bf,stroke:#b7791f,stroke-width:2px,color:#3a2a00
+  classDef red fill:#ffd6d6,stroke:#c53030,stroke-width:2px,color:#3a0505
+  classDef gray fill:#eef2f7,stroke:#64748b,stroke-width:1px,color:#111827
+```
+
+## chart epic-gantt Build000r Epic Status
+```mermaid
+gantt
+  title build000r status as of 2026-05-28
+  dateFormat YYYY-MM-DD
+  section GREEN Proven
+  GREEN README reviewed :done, 2026-05-28, 1d
+  section RED Missing
+  RED no validation command found :crit, 2026-05-28, 1d
+  section YELLOW Planned
+  YELLOW publish status ld7.6 :active, 2026-05-28, 1d
+  YELLOW link checker ld7.7 :active, 2026-05-29, 1d
+  YELLOW sync contract ld7.8 :active, 2026-05-30, 1d
+  YELLOW baseline and manifest refactor ld7.9 ld7.10 :active, 2026-05-31, 2d
+```
+
+## chart epic-map Build000r Dependency Map
+```mermaid
+flowchart TD
+  readme["GREEN product portfolio README"]:::green
+  validation["YELLOW add link and source checker ld7.7"]:::yellow
+  sync["YELLOW define README versus site source of truth ld7.8"]:::yellow
+  baseline["YELLOW generation or link-check baseline ld7.9"]:::yellow
+  manifest["YELLOW structured portfolio manifest ld7.10"]:::yellow
+  readme --> validation --> sync
+  sync --> baseline --> manifest
+  classDef green fill:#dff7df,stroke:#20833a,stroke-width:2px,color:#0f2f18
+  classDef yellow fill:#fff3bf,stroke:#b7791f,stroke-width:2px,color:#3a2a00
+```
+
+## chart primary-flows Build000r Primary Flows
+```mermaid
+flowchart TD
+  visitor["Visitor"]:::gray
+  portfolio["GREEN reads primary portfolio entries"]:::green
+  links["YELLOW clicks public repos and pages with checker ld7.7"]:::yellow
+  source["YELLOW source-of-truth sync decision ld7.8"]:::yellow
+  update["YELLOW manifest-driven update path ld7.10"]:::yellow
+  visitor --> portfolio --> links --> source --> update
+  classDef green fill:#dff7df,stroke:#20833a,stroke-width:2px,color:#0f2f18
+  classDef yellow fill:#fff3bf,stroke:#b7791f,stroke-width:2px,color:#3a2a00
+  classDef gray fill:#eef2f7,stroke:#64748b,stroke-width:1px,color:#111827
+```
+
+## chart proof-status Build000r Proof Status
+```mermaid
+flowchart TD
+  read["GREEN README read"]:::green
+  git["GREEN git tree was clean before planning files"]:::green
+  cmd["RED no package Makefile or test command found"]:::red
+  links["YELLOW no link checker yet ld7.7"]:::yellow
+  sync["YELLOW no site sync proof ld7.8"]:::yellow
+  read --> git --> cmd --> links --> sync
+  classDef green fill:#dff7df,stroke:#20833a,stroke-width:2px,color:#0f2f18
+  classDef yellow fill:#fff3bf,stroke:#b7791f,stroke-width:2px,color:#3a2a00
+  classDef red fill:#ffd6d6,stroke:#c53030,stroke-width:2px,color:#3a0505
+```
+
+## chart next-move Build000r Next Move
+```mermaid
+flowchart TD
+  rank["Power-map: customer is prospect deciding which Buildooor product is credible"]:::gray
+  one["1 add portfolio link checker ld7.7"]:::yellow
+  two["2 decide README site sync contract ld7.8"]:::yellow
+  three["3 baseline generation or checking path ld7.9"]:::yellow
+  four["4 move entries to structured manifest ld7.10"]:::yellow
+  rank --> one --> two --> three --> four
+  classDef yellow fill:#fff3bf,stroke:#b7791f,stroke-width:2px,color:#3a2a00
+  classDef gray fill:#eef2f7,stroke:#64748b,stroke-width:1px,color:#111827
+```
+
