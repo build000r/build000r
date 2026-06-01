@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate build000r portfolio README links and intentional private entries."""
+"""Validate build000r portfolio README links, manifest, and private entries."""
 
 from __future__ import annotations
 
@@ -14,6 +14,7 @@ from urllib.request import Request, urlopen
 
 
 PORTFOLIO_SECTIONS = {"primary", "open source", "side projects"}
+PORTFOLIO_END_HEADING = "source of truth"
 ENTRY_RE = re.compile(
     r"^\*\*(?:\[(?P<linked_name>[^\]]+)\]\((?P<entry_url>https?://[^)]+)\)"
     r"|(?P<plain_name>[^*]+))\*\*\s+--\s+(?P<description>.+)$"
@@ -43,6 +44,98 @@ def load_policy(path: Path) -> dict:
     policy.setdefault("intentionally_unlinked", {})
     policy.setdefault("link_overrides", {})
     return policy
+
+
+def load_manifest(path: Path) -> dict:
+    with path.open(encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def link_text(label: str, url: str | None = None, code: bool = False) -> str:
+    text = f"`{label}`" if code else label
+    if url:
+        return f"[{text}]({url})"
+    return text
+
+
+def render_entry(entry: dict) -> list[str]:
+    name = entry["name"]
+    url = entry.get("url")
+    title = f"[{name}]({url})" if url else name
+    lines = [f"**{title}** -- {entry['description']}"]
+
+    subitems = entry.get("subitems", [])
+    if subitems:
+        lines.append("")
+
+    for subitem in subitems:
+        label = subitem.get("markdown") or link_text(
+            subitem["label"], subitem.get("url"), code=True
+        )
+        lines.append(f"- {label} -- {subitem['description']}")
+
+    return lines
+
+
+def render_manifest_portfolio(manifest: dict) -> str:
+    lines: list[str] = []
+
+    intro = manifest["intro"]
+    intro_link = intro["link"]
+    lines.append(
+        f"{intro['text']} · [{intro_link['label']}]({intro_link['url']})"
+    )
+    lines.append("")
+
+    for item in manifest["focus"]:
+        lines.append(f"**{item['name']}** -- {item['description']}")
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+
+    for section_index, section in enumerate(manifest["sections"]):
+        if section_index:
+            lines.append("---")
+            lines.append("")
+
+        lines.append(f"### {section['title']}")
+        if section.get("note"):
+            lines.append(section["note"])
+        lines.append("")
+
+        for entry in section["entries"]:
+            lines.extend(render_entry(entry))
+            lines.append("")
+
+    footer = manifest["footer"]
+    footer_link = footer["link"]
+    lines.append(
+        f"{footer['text']} · [{footer_link['label']}]({footer_link['url']})"
+    )
+
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def read_readme_portfolio_block(readme: Path) -> str:
+    lines: list[str] = []
+    for line in readme.read_text(encoding="utf-8").splitlines():
+        heading = HEADING_RE.match(line)
+        if heading and normalize_name(heading.group("heading")) == PORTFOLIO_END_HEADING:
+            break
+        lines.append(line)
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def check_manifest_matches_readme(readme: Path, manifest: dict) -> list[str]:
+    rendered = render_manifest_portfolio(manifest)
+    current = read_readme_portfolio_block(readme)
+    if rendered == current:
+        return []
+    return [
+        "README.md portfolio block differs from portfolio-manifest.json; "
+        "run scripts/check_portfolio_readme.py --render-portfolio and update README.md"
+    ]
 
 
 def parse_entries(readme: Path) -> tuple[list[PortfolioEntry], list[str]]:
@@ -158,6 +251,17 @@ def main() -> int:
         help="JSON file listing intentional private/unlinked entries",
     )
     parser.add_argument(
+        "--manifest",
+        type=Path,
+        default=Path("portfolio-manifest.json"),
+        help="JSON manifest used to render the README portfolio block",
+    )
+    parser.add_argument(
+        "--render-portfolio",
+        action="store_true",
+        help="print the README portfolio block rendered from the manifest",
+    )
+    parser.add_argument(
         "--offline",
         action="store_true",
         help="parse README and policy without fetching links",
@@ -165,9 +269,15 @@ def main() -> int:
     parser.add_argument("--timeout", type=float, default=10.0)
     args = parser.parse_args()
 
+    manifest = load_manifest(args.manifest)
+    if args.render_portfolio:
+        print(render_manifest_portfolio(manifest), end="")
+        return 0
+
     policy = load_policy(args.policy)
     entries, urls = parse_entries(args.readme)
-    errors = check_unlinked_entries(entries, policy)
+    errors = check_manifest_matches_readme(args.readme, manifest)
+    errors.extend(check_unlinked_entries(entries, policy))
     if not args.offline:
         errors.extend(check_urls(urls, policy, args.timeout))
 
@@ -182,7 +292,8 @@ def main() -> int:
     link_mode = "offline" if args.offline else f"{len(urls)} links fetched"
     print(
         "portfolio README check passed: "
-        f"{linked} linked entries, {unlinked} intentional private entries, {link_mode}"
+        f"{linked} linked entries, {unlinked} intentional private entries, "
+        f"manifest matches README, {link_mode}"
     )
     return 0
 

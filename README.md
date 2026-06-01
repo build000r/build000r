@@ -28,7 +28,6 @@ linked entries point at public pages/repos; unlinked entries are private or oper
 
 **cycle chef** -- practitioner-supervised, cycle-synced meal planning. ios app, backend api, public site, and component catalog for phase-aware nutrition workflows.
 
-
 **[skills](https://github.com/build000r/skills)** -- a very particular set of skills for claude code.
 
 **human as a service** -- accountable, ai-augmented expertise. clients hire the responsible operator, not a chatbot: ai handles search, synthesis, critique, implementation, and packaging behind the scenes; the human owns context, judgment, communication, and final output. current shape: ai build diagnosis, production hardening, custom expert workflows, and private playbooks that stay private until they are safe to publish.
@@ -57,19 +56,21 @@ open to ai build diagnosis, production hardening, and implementation engagements
 
 ### source of truth
 
-`README.md` is the canonical source for this public portfolio index. It is not
-currently generated from a structured manifest and this repo does not contain an
-executable sync from buildooor.com.
+`portfolio-manifest.json` is the canonical structured source for the public
+portfolio block above. `README.md` carries the rendered public copy, and this
+repo still does not contain an executable sync from buildooor.com.
 
-Drift is controlled by keeping public claims in this README and public/private
-link intent in `portfolio-link-policy.json`. Run `make check` after changing
-portfolio entries, links, or private/internal status; it validates public README
-links and fails when an unlinked entry is missing an explicit policy reason.
+Drift is controlled by keeping portfolio entries in `portfolio-manifest.json`,
+the rendered README block in sync, and public/private link intent in
+`portfolio-link-policy.json`. Run `make check` after changing portfolio entries,
+links, or private/internal status; it validates that the manifest renders the
+README portfolio block, validates public README links, and fails when an
+unlinked entry is missing an explicit policy reason.
 
-Until the planned structured manifest exists, updates are manual: edit the
-README entry, update `portfolio-link-policy.json` when link status changes, and
-compare the affected public buildooor.com page by hand before publishing a
-claim that points there.
+To update the portfolio, edit `portfolio-manifest.json`, render the block with
+`python3 scripts/check_portfolio_readme.py --render-portfolio`, update
+`portfolio-link-policy.json` when link status changes, and compare the affected
+public buildooor.com page by hand before publishing a claim that points there.
 
 ### validation
 
@@ -77,6 +78,7 @@ claim that points there.
 make check
 ```
 
-This validates public README links and requires every unlinked portfolio entry
-to be listed in `portfolio-link-policy.json` with an explicit private/internal
-reason.
+This validates that `portfolio-manifest.json` renders the README portfolio
+block, validates public README links, and requires every unlinked portfolio
+entry to be listed in `portfolio-link-policy.json` with an explicit
+private/internal reason.

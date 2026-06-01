@@ -1,0 +1,133 @@
+{
+  "intro": {
+    "text": "building production ai systems and operator tools for domain experts",
+    "link": {
+      "label": "buildooor.com",
+      "url": "https://buildooor.com"
+    }
+  },
+  "focus": [
+    {
+      "name": "finance",
+      "description": "ai-powered accounting infrastructure"
+    },
+    {
+      "name": "health",
+      "description": "clinical lab analysis and personalized health optimization"
+    },
+    {
+      "name": "ai for domain experts",
+      "description": "forward-deployed engineering, custom agentic workflows, and training for senior practitioners and founder-execs"
+    }
+  ],
+  "sections": [
+    {
+      "title": "primary",
+      "note": "linked entries point at public pages/repos; unlinked entries are private or operator-internal.",
+      "entries": [
+        {
+          "name": "skillbox",
+          "url": "https://github.com/build000r/skillbox",
+          "description": "private single-tenant dev box for you and your coding agents. docker-based, tailscale-first, with durable agent homes and client-scoped overlays."
+        },
+        {
+          "name": "swimmers",
+          "url": "https://github.com/build000r/swimmers",
+          "description": "terminal aquarium for tmux sessions. each session is an animated ascii fish. active ones swim, busy ones bubble, sleeping ones sink. rust tui + axum api."
+        },
+        {
+          "name": "sweet potato",
+          "description": "self-hostable auth + payments control plane. email/password, magic links, multi-wallet identity, application keys, stripe checkout/subscriptions/webhooks, tiered entitlements, pii encryption, and audit logs so multiple apps can agree on who a user is and what they paid for.",
+          "subitems": [
+            {
+              "label": "spaps-sdk",
+              "url": "https://www.npmjs.com/package/spaps-sdk",
+              "description": "typescript client with permission checking, rbac, and dayrate scheduling"
+            },
+            {
+              "label": "spaps",
+              "url": "https://www.npmjs.com/package/spaps",
+              "description": "cli and docker compose orchestrator for local spaps server"
+            },
+            {
+              "label": "spaps",
+              "url": "https://pypi.org/project/spaps/",
+              "description": "python client (pypi)"
+            },
+            {
+              "label": "spaps-server-quickstart, spaps-types, and spaps-issue-reporting-react",
+              "markdown": "`spaps-server-quickstart`, `spaps-types`, and `spaps-issue-reporting-react`",
+              "description": "backend starter, shared contracts, and reusable feedback UI"
+            }
+          ]
+        },
+        {
+          "name": "cfo",
+          "description": "ai-powered accounting infrastructure. quickbooks online compatible mcp server, client portal and advisory site, and a mobile financial assistant. built for cpas managing multiple company files."
+        },
+        {
+          "name": "htma labs",
+          "url": "https://htmalabs.com",
+          "description": "mineral analysis visualizations and recovery protocols for data driven holistic health practitioners and their clients."
+        },
+        {
+          "name": "cycle chef",
+          "description": "practitioner-supervised, cycle-synced meal planning. ios app, backend api, public site, and component catalog for phase-aware nutrition workflows."
+        },
+        {
+          "name": "skills",
+          "url": "https://github.com/build000r/skills",
+          "description": "a very particular set of skills for claude code."
+        },
+        {
+          "name": "human as a service",
+          "description": "accountable, ai-augmented expertise. clients hire the responsible operator, not a chatbot: ai handles search, synthesis, critique, implementation, and packaging behind the scenes; the human owns context, judgment, communication, and final output. current shape: ai build diagnosis, production hardening, custom expert workflows, and private playbooks that stay private until they are safe to publish."
+        }
+      ]
+    },
+    {
+      "title": "open source",
+      "entries": [
+        {
+          "name": "clawgs",
+          "url": "https://github.com/build000r/clawgs",
+          "description": "terminal-native ai log analysis. stream, tag, and query shell output with llms."
+        },
+        {
+          "name": "etcha",
+          "url": "https://github.com/build000r/etcha",
+          "description": "turn a prompt into an etch a sketch tape. macos native, swift 6."
+        },
+        {
+          "name": "dogswipe",
+          "url": "https://github.com/build000r/dogswipe",
+          "description": "public codex \"/goal\" experiment in taking an ios/backend idea to production in roughly ~40 hours. Swipe-first local hotdog discovery, spaps auth, edge deploy, and TestFlight handoff."
+        }
+      ]
+    },
+    {
+      "title": "side projects",
+      "entries": [
+        {
+          "name": "unclawg",
+          "description": "governed control plane for ai agent work. agents propose, humans approve."
+        },
+        {
+          "name": "dream",
+          "description": "iphone-first lucid dream coach. local-first wake capture, nightmare patterns, and nightly ritual flow with cloud agents as session-time helpers."
+        },
+        {
+          "name": "meaning",
+          "description": "local cli for asking a coding agent to compare multiple plausible framings of a lived moment. local-first reflection, provenance-aware lenses, explicit uncertainty, and safety boundaries instead of one overconfident ai answer."
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "text": "open to ai build diagnosis, production hardening, and implementation engagements",
+    "link": {
+      "label": "buildooor.com",
+      "url": "https://buildooor.com"
+    }
+  }
+}
