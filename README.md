@@ -55,6 +55,22 @@ linked entries point at public pages/repos; unlinked entries are private or oper
 
 open to ai build diagnosis, production hardening, and implementation engagements · [buildooor.com](https://buildooor.com)
 
+### source of truth
+
+`README.md` is the canonical source for this public portfolio index. It is not
+currently generated from a structured manifest and this repo does not contain an
+executable sync from buildooor.com.
+
+Drift is controlled by keeping public claims in this README and public/private
+link intent in `portfolio-link-policy.json`. Run `make check` after changing
+portfolio entries, links, or private/internal status; it validates public README
+links and fails when an unlinked entry is missing an explicit policy reason.
+
+Until the planned structured manifest exists, updates are manual: edit the
+README entry, update `portfolio-link-policy.json` when link status changes, and
+compare the affected public buildooor.com page by hand before publishing a
+claim that points there.
+
 ### validation
 
 ```bash
