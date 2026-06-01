@@ -54,3 +54,13 @@ linked entries point at public pages/repos; unlinked entries are private or oper
 **meaning** -- local cli for asking a coding agent to compare multiple plausible framings of a lived moment. local-first reflection, provenance-aware lenses, explicit uncertainty, and safety boundaries instead of one overconfident ai answer.
 
 open to ai build diagnosis, production hardening, and implementation engagements · [buildooor.com](https://buildooor.com)
+
+### validation
+
+```bash
+make check
+```
+
+This validates public README links and requires every unlinked portfolio entry
+to be listed in `portfolio-link-policy.json` with an explicit private/internal
+reason.

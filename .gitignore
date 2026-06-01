@@ -1,6 +1,8 @@
 DU*.md
 WI*.md
 .n*/
+__pycache__/
+*.py[cod]
 
 # Local agent/tool state
 .beads/

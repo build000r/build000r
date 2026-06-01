@@ -15,8 +15,8 @@
 flowchart LR
   vision["build000r README: public portfolio index"]:::gray
   read["GREEN README reviewed"]:::green
-  checks["RED no executable package or validation command found"]:::red
-  linkcheck["YELLOW portfolio link checker: build000r-portfolio-reality-idea-plan-ld7.7"]:::yellow
+  checks["GREEN make check validates README links and private entries"]:::green
+  linkcheck["GREEN portfolio link checker: build000r-portfolio-reality-idea-plan-ld7.7"]:::green
   contract["YELLOW README or site sync contract: build000r-portfolio-reality-idea-plan-ld7.8"]:::yellow
   manifest["YELLOW structured manifest refactor: build000r-portfolio-reality-idea-plan-ld7.10"]:::yellow
   vision --> read --> checks --> linkcheck --> contract --> manifest
@@ -33,8 +33,7 @@ gantt
   dateFormat YYYY-MM-DD
   section GREEN Proven
   GREEN README reviewed :done, 2026-05-28, 1d
-  section RED Missing
-  RED no validation command found :crit, 2026-05-28, 1d
+  GREEN README validation command exists :done, 2026-06-01, 1d
   section YELLOW Planned
   YELLOW publish status ld7.6 :active, 2026-05-28, 1d
   YELLOW link checker ld7.7 :active, 2026-05-29, 1d
@@ -46,7 +45,7 @@ gantt
 ```mermaid
 flowchart TD
   readme["GREEN product portfolio README"]:::green
-  validation["YELLOW add link and source checker ld7.7"]:::yellow
+  validation["GREEN link and source checker ld7.7"]:::green
   sync["YELLOW define README versus site source of truth ld7.8"]:::yellow
   baseline["YELLOW generation or link-check baseline ld7.9"]:::yellow
   manifest["YELLOW structured portfolio manifest ld7.10"]:::yellow
@@ -75,8 +74,8 @@ flowchart TD
 flowchart TD
   read["GREEN README read"]:::green
   git["GREEN git tree was clean before planning files"]:::green
-  cmd["RED no package Makefile or test command found"]:::red
-  links["YELLOW no link checker yet ld7.7"]:::yellow
+  cmd["GREEN make check command found"]:::green
+  links["GREEN link checker validates README links and private entries ld7.7"]:::green
   sync["YELLOW no site sync proof ld7.8"]:::yellow
   read --> git --> cmd --> links --> sync
   classDef green fill:#dff7df,stroke:#20833a,stroke-width:2px,color:#0f2f18
@@ -96,4 +95,3 @@ flowchart TD
   classDef yellow fill:#fff3bf,stroke:#b7791f,stroke-width:2px,color:#3a2a00
   classDef gray fill:#eef2f7,stroke:#64748b,stroke-width:1px,color:#111827
 ```
-

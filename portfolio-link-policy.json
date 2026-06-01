@@ -1,0 +1,21 @@
+{
+  "intentionally_unlinked": {
+    "cfo": "private product surface; keep unlinked until there is a public canonical page or repo",
+    "cycle chef": "private product surface; keep unlinked until there is a public canonical page or repo",
+    "dream": "private side project; keep unlinked until public release",
+    "human as a service": "operator-internal offer; keep unlinked until there is a public canonical page",
+    "meaning": "private/local side project; keep unlinked until public release",
+    "sweet potato": "private product surface; public packages are linked below the entry",
+    "unclawg": "private/operator-internal project; keep unlinked until public release"
+  },
+  "link_overrides": {
+    "https://www.npmjs.com/package/spaps": {
+      "allowed_statuses": [403],
+      "reason": "npm returns 403 to this headless checker while the package page remains the public source link"
+    },
+    "https://www.npmjs.com/package/spaps-sdk": {
+      "allowed_statuses": [403],
+      "reason": "npm returns 403 to this headless checker while the package page remains the public source link"
+    }
+  }
+}
