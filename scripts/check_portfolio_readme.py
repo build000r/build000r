@@ -13,7 +13,6 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
-PORTFOLIO_SECTIONS = {"primary", "open source", "side projects"}
 PORTFOLIO_END_HEADING = "source of truth"
 ENTRY_RE = re.compile(
     r"^\*\*(?:\[(?P<linked_name>[^\]]+)\]\((?P<entry_url>https?://[^)]+)\)"
@@ -49,6 +48,10 @@ def load_policy(path: Path) -> dict:
 def load_manifest(path: Path) -> dict:
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def manifest_section_titles(manifest: dict) -> set[str]:
+    return {normalize_name(section["title"]) for section in manifest["sections"]}
 
 
 def link_text(label: str, url: str | None = None, code: bool = False) -> str:
@@ -138,7 +141,9 @@ def check_manifest_matches_readme(readme: Path, manifest: dict) -> list[str]:
     ]
 
 
-def parse_entries(readme: Path) -> tuple[list[PortfolioEntry], list[str]]:
+def parse_entries(
+    readme: Path, portfolio_sections: set[str]
+) -> tuple[list[PortfolioEntry], list[str]]:
     text = readme.read_text(encoding="utf-8")
     entries: list[PortfolioEntry] = []
     active_section: str | None = None
@@ -149,7 +154,7 @@ def parse_entries(readme: Path) -> tuple[list[PortfolioEntry], list[str]]:
             active_section = normalize_name(heading.group("heading"))
             continue
 
-        if active_section not in PORTFOLIO_SECTIONS:
+        if active_section not in portfolio_sections:
             continue
 
         match = ENTRY_RE.match(line)
@@ -275,7 +280,7 @@ def main() -> int:
         return 0
 
     policy = load_policy(args.policy)
-    entries, urls = parse_entries(args.readme)
+    entries, urls = parse_entries(args.readme, manifest_section_titles(manifest))
     errors = check_manifest_matches_readme(args.readme, manifest)
     errors.extend(check_unlinked_entries(entries, policy))
     if not args.offline:
