@@ -66,6 +66,44 @@ class PortfolioReadmeTests(unittest.TestCase):
         self.assertEqual(0, result.returncode, result.stderr)
         self.assertIn("portfolio README check passed", result.stdout)
 
+    def test_entry_parsing_stops_at_source_of_truth_boundary(self):
+        manifest = {
+            "sections": [
+                {"title": "Primary"},
+            ]
+        }
+        readme_text = """\
+### primary
+
+**[public app](https://example.com/public)** -- linked entry.
+
+### source of truth
+
+### primary
+
+**internal docs** -- this heading is outside the portfolio block.
+
+See [docs](https://example.com/docs).
+"""
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            readme = Path(tmpdir) / "README.md"
+            readme.write_text(readme_text, encoding="utf-8")
+
+            entries, urls = check_portfolio_readme.parse_entries(
+                readme, check_portfolio_readme.manifest_section_titles(manifest)
+            )
+
+        errors = check_portfolio_readme.check_unlinked_entries(
+            entries, {"intentionally_unlinked": {}, "link_overrides": {}}
+        )
+
+        self.assertEqual(["public app"], [entry.name for entry in entries])
+        self.assertEqual(
+            ["https://example.com/docs", "https://example.com/public"], urls
+        )
+        self.assertEqual([], errors)
+
 
 if __name__ == "__main__":
     unittest.main()

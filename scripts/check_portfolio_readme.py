@@ -38,6 +38,10 @@ def normalize_name(value: str) -> str:
     return re.sub(r"\s+", " ", value.strip().lower())
 
 
+def is_portfolio_end_heading(value: str) -> bool:
+    return normalize_name(value) == PORTFOLIO_END_HEADING
+
+
 def load_policy(path: Path) -> dict:
     with path.open(encoding="utf-8") as handle:
         policy = json.load(handle)
@@ -125,7 +129,7 @@ def read_readme_portfolio_block(readme: Path) -> str:
     lines: list[str] = []
     for line in readme.read_text(encoding="utf-8").splitlines():
         heading = HEADING_RE.match(line)
-        if heading and normalize_name(heading.group("heading")) == PORTFOLIO_END_HEADING:
+        if heading and is_portfolio_end_heading(heading.group("heading")):
             break
         lines.append(line)
     return "\n".join(lines).rstrip() + "\n"
@@ -152,7 +156,10 @@ def parse_entries(
     for line_number, line in enumerate(text.splitlines(), start=1):
         heading = HEADING_RE.match(line)
         if heading:
-            active_section = normalize_name(heading.group("heading"))
+            heading_name = heading.group("heading")
+            if is_portfolio_end_heading(heading_name):
+                break
+            active_section = normalize_name(heading_name)
             continue
 
         if active_section not in portfolio_sections:
