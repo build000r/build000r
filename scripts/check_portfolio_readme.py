@@ -20,6 +20,7 @@ ENTRY_RE = re.compile(
 )
 HEADING_RE = re.compile(r"^###\s+(?P<heading>.+?)\s*$")
 LINK_RE = re.compile(r"\[[^\]]+\]\((?P<url>https?://[^)]+)\)")
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 @dataclass(frozen=True)
@@ -248,17 +249,17 @@ def check_urls(urls: list[str], policy: dict, timeout: float) -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--readme", type=Path, default=Path("README.md"))
+    parser.add_argument("--readme", type=Path, default=REPO_ROOT / "README.md")
     parser.add_argument(
         "--policy",
         type=Path,
-        default=Path("portfolio-link-policy.json"),
+        default=REPO_ROOT / "portfolio-link-policy.json",
         help="JSON file listing intentional private/unlinked entries",
     )
     parser.add_argument(
         "--manifest",
         type=Path,
-        default=Path("portfolio-manifest.json"),
+        default=REPO_ROOT / "portfolio-manifest.json",
         help="JSON manifest used to render the README portfolio block",
     )
     parser.add_argument(

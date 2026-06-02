@@ -1,4 +1,5 @@
 import importlib.util
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -50,6 +51,20 @@ class PortfolioReadmeTests(unittest.TestCase):
         self.assertEqual(["public app", "secret app"], [entry.name for entry in entries])
         self.assertEqual(1, len(errors))
         self.assertIn("'secret app' needs an intentional-private reason", errors[0])
+
+    def test_cli_defaults_work_outside_repo_root(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            result = subprocess.run(
+                [sys.executable, str(MODULE_PATH), "--offline"],
+                cwd=tmpdir,
+                check=False,
+                text=True,
+                capture_output=True,
+            )
+
+        self.assertEqual("", result.stderr)
+        self.assertEqual(0, result.returncode, result.stderr)
+        self.assertIn("portfolio README check passed", result.stdout)
 
 
 if __name__ == "__main__":
